@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import MainInput from './MainInput';
+import Primarybtn from './Primarybtn';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+  const[name , setName] = useState("hello ji")
+  return <div>
+    <MainInput setName={setName}/>
+    <Primarybtn fullName={name}/>     
+    {/* <h1>{name}</h1> */}
+
+    
+  </div>
 }
 
 export default App;
+
+// state controls the property of a component
